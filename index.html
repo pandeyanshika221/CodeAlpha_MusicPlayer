@@ -23,6 +23,26 @@
             aria-label="Search songs"
           />
         </div>
+        <div class="sidebar__actions">
+          <input
+            type="file"
+            id="fileInput"
+            accept="audio/*"
+            multiple
+            aria-label="Upload audio files"
+          />
+          <div class="sidebar__playlists">
+            <select id="playlistSelector" aria-label="Select playlist"></select>
+            <button
+              id="createPlaylistBtn"
+              class="playlist-create-btn"
+              type="button"
+              aria-label="Create new playlist"
+            >
+              +
+            </button>
+          </div>
+        </div>
         <ul class="playlist" id="playlist" aria-label="Playlist"></ul>
       </aside>
 
@@ -38,6 +58,14 @@
             <span></span>
           </button>
           <div class="top-bar__title">Now Playing</div>
+          <button
+            id="themeToggleBtn"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            
+          </button>
         </header>
 
         <section class="player" aria-label="Music player">
@@ -98,6 +126,6 @@
     <!-- Hidden HTML5 audio element used for playback -->
     <audio id="audio"></audio>
 
-    <script src="script.js"></script>
+    <script src="player.js"></script>
   </body>
 </html>
